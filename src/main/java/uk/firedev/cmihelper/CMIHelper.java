@@ -14,7 +14,7 @@ public final class CMIHelper {
      * @param player The player to check.
      * @return Whether a player is in vanish.
      */
-    public boolean isVanished(@NotNull UUID player) {
+    public static boolean isVanished(@NotNull UUID player) {
         if (isPluginEnabled("CMI")) {
             return CMIUser.getUser(player).isCMIVanished();
         }
@@ -26,7 +26,7 @@ public final class CMIHelper {
      * @param player The player to update.
      * @param vanished Should the player should be in vanish.
      */
-    public void setVanished(@NotNull UUID player, boolean vanished) {
+    public static void setVanished(@NotNull UUID player, boolean vanished) {
         if (isPluginEnabled("CMI")) {
             CMIUser.getUser(player).setVanished(vanished, true);
         }
@@ -38,14 +38,14 @@ public final class CMIHelper {
      * @param message The message to parse
      * @return The parsed message
      */
-    public String parseColors(@NotNull String message) {
+    public static String parseColors(@NotNull String message) {
         if (isPluginEnabled("CMILib")) {
             return CMIChatColor.colorize(message);
         }
         return message;
     }
 
-    private boolean isPluginEnabled(@NotNull String plugin) {
+    private static boolean isPluginEnabled(@NotNull String plugin) {
         return Bukkit.getPluginManager().isPluginEnabled(plugin);
     }
 
