@@ -51,12 +51,12 @@
 
   <distributionManagement>
     <snapshotRepository>
-      <id>firedev.nexus</id>
-      <url>https://repo.firedev.uk/repository/maven-snapshots/</url>
+      <id>firedev.repo</id>
+      <url>https://repo.firedev.uk/snapshots/</url>
     </snapshotRepository>
     <repository>
-      <id>firedev.nexus</id>
-      <url>https://repo.firedev.uk/repository/maven-releases/</url>
+      <id>firedev.repo</id>
+      <url>https://repo.firedev.uk/releases/</url>
     </repository>
   </distributionManagement>
 
@@ -64,10 +64,6 @@
       <repository>
           <id>spigotmc-repo</id>
           <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
-      </repository>
-      <repository>
-          <id>firedev-repo</id>
-          <url>https://repo.firedev.uk/repository/maven-public/</url>
       </repository>
   </repositories>
 
